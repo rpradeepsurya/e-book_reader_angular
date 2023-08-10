@@ -1,0 +1,204 @@
+.normal-font-size {
+    font-size: 23px;
+}
+
+.large-font-size {
+    font-size: 30px;
+}
+
+.larger-font-size {
+    font-size: 40px;
+    line-height: 40px !important;
+}
+
+.normal-space-size {
+    line-height: 100% !important;
+}
+
+.big-space-size {
+    line-height: 150% !important;
+}
+
+.bigger-space-size {
+    line-height: 200% !important;
+}
+
+#features-bar {
+    display: flex;
+    width: 80%;
+    margin: 10px auto;
+    justify-content: center;
+}
+
+#font-buttons {
+    text-align: center;
+    margin: auto 0;
+}
+
+#normal-btn {
+    font-size: 23px;
+}
+
+#large-btn {
+    font-size: 26px;
+}
+
+#larger-btn {
+    font-size: 30px;
+}
+
+#normal-btn,
+#large-btn,
+#larger-btn {
+    color: black;
+    border: none;
+    background-color: transparent;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#spacing-buttons {
+    text-align: center;
+    margin: auto 30px;
+}
+
+#normal-spacing-btn,
+#big-spacing-btn,
+#bigger-spacing-btn {
+    color: black;
+    border: none;
+    background-color: transparent;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#show-pre-btn {
+    cursor: pointer;
+    display: inline-block;
+    width: 90px;
+    color: #826520;
+    border: none;
+    background-color: transparent;
+    margin: auto 20px;
+}
+
+#text-container {
+    background-color: transparent;
+    overflow: auto;
+    box-shadow: 10px 10px 43px -18px rgba(0, 0, 0, 0.75);
+    margin: auto;
+    height: 60%;
+    padding: 50px;
+    width: 80%;
+    background: url("https://i.imgur.com/0kjMcUe.png");
+    background-color: #8a6b25;
+    filter: brightness(0.95) sepia(40%) saturate(80%);
+    color: #826520;
+    font-family: "Josefin Slab", serif;
+    font-size: 23px;
+    line-height: 100%;
+    border-radius: 30px;
+    margin-bottom: 100px !important;
+}
+
+h1 {
+    line-height: 60px !important;
+}
+
+#text,
+#text-pre {
+    color: #826520;
+    font-family: "Josefin Slab", serif;
+}
+
+#text {
+    text-align: justify;
+}
+
+/* the scrollbar styles */
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: #d7bf86;
+    background-image: url("https://www.transparenttextures.com/patterns/black-paper.png");
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d7bf86;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8a6b25;
+}
+
+@media (min-width: 1200px) {
+    #text-container {
+        height: 60%;
+    }
+}
+
+@media (min-width: 1600px) {
+    #features-bar {
+        margin-top: 40px;
+    }
+
+    #text-container {
+        height: 70%;
+    }
+}
+
+.next-prev-buttons {
+    width: 40px;
+    color: #826520;
+    border: 1px solid #826520;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: auto 0;
+}
+.next-prev-buttons button:hover {
+    background-color: #826520;
+    color: white;
+}   
+input {
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 19px;
+    font-family: "Montserrat", sans-serif;
+    display: block;
+    background-color: transparent;
+    border-radius: 30px;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: rgb(82, 56, 6) !important;
+    opacity: 0.8;
+    font-size: 19px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    #features {
+        flex-direction: column;
+        margin: 10px auto;
+    }
+
+    #show-pre-btn {
+        margin-bottom: 10px;
+        margin: 4px auto;
+    }
+
+    #text-container {
+        width: 70%;
+        height: 45%;
+    }
+}

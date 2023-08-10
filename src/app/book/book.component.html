@@ -1,0 +1,37 @@
+<div id="features-bar">
+    <div id="font-buttons">
+        <button id="normal-btn" (click)="changeFontSize('normal-font-size')" matTooltip="Normal Font">Aa</button>
+        <button id="large-btn" (click)="changeFontSize('large-font-size')" matTooltip="Large Font">Aa</button>
+        <button id="larger-btn" (click)="changeFontSize('larger-font-size')"  matTooltip="Larger Font">Aa</button>
+    </div>
+
+    <div id="spacing-buttons">
+        <button id="normal-spacing-btn" (click)="changeLineSpacing('normal-space-size')" matTooltip="Normal Line Spacing">
+            <img src="assets/line-spacing.png" width="30px" height="20px" />
+        </button>
+        <button id="big-spacing-btn" (click)="changeLineSpacing('big-space-size')" matTooltip="Big Line Spacing">
+            <img src="assets/line-spacing.png" width="30px" height="23px" />
+        </button>
+        <button id="bigger-spacing-btn" (click)="changeLineSpacing('bigger-space-size')" matTooltip="Bigger Line Spacing">
+            <img src="assets/line-spacing.png" width="30px" height="26px" />
+        </button>
+    </div>
+
+    <button id="show-pre-btn" (click)="toggleDisplay()" matTooltip="Change Text Display">
+        <img src="assets/wrap-text.png" width="30px" height="30" />
+    </button>
+
+    <div id="search-input">
+        <input [(ngModel)]="searchTextInput" type="search" placeholder="Search book text here" (input)="countMatches(searchTextInput)"/>
+    </div>
+    <p *ngIf="searchTextInput.length !== 0">{{ index + 1 }}/{{ count }} match</p>
+    <button class="next-prev-buttons" (click)="scrollToPrevious()" [disabled]="count === 0" style="margin-left: 10px">prev</button>
+    <button class="next-prev-buttons" (click)="scrollToNext()" [disabled]="count === 0">next</button> 
+
+</div>
+
+<div id="text-container">
+    <h1>{{ bookData["title"] }}</h1>
+    <div id="text" [innerHtml]="bookContinuousText | highlight: searchTextInput" *ngIf="showPre === false"></div>
+    <pre id="text-pre" [innerHtml]="bookText | highlight: searchTextInput" *ngIf="showPre === true"></pre>
+</div>
