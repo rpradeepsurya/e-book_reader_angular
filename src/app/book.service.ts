@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class BookService {
 
   private apiurl:string = "https://gutendex.com/books";
+  private bookurl:string = "https://www.gutenberg.org";
 
   constructor(
     private http: HttpClient
@@ -21,7 +22,7 @@ export class BookService {
   }
 
   getBookText(url:string) {
-    return this.http.get(url, {
+    return this.http.get(`${this.bookurl}${url}`, {
       responseType: 'text'
     });
   }
