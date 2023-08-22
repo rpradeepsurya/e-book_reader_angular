@@ -1,31 +1,45 @@
-<<<<<<< HEAD
-# EbookReader
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.0.
+# E-Book Reader (Angular)
 
-## Development server
+An intuitive eBook reader application built with Angular, leveraging the Gutendex API to fetch and display book metadata from Project Gutenberg.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **Search Books**: Easily find your favorite titles or authors.
+- **View Book Details**: Get comprehensive details of each book, including cover image, title, and author.
+- **Read & Download**: Access the content directly and have an option to download.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Used
 
-## Build
+- **Angular**: For building a responsive and dynamic user interface.
+- **Gutendex API**: Fetching book metadata from Project Gutenberg.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Getting Started
 
-## Running unit tests
+### Prerequisites
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Ensure you have the following installed:
 
-## Running end-to-end tests
+- [Node.js and npm](https://nodejs.org/)
+- [Angular CLI](https://cli.angular.io/)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Installation
 
-## Further help
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your_username/ebook-reader-angular.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd ebook-reader-angular
+   ```
+3. Install the dependencies:
+   ```sh
+   npm install
+   ```
+4. Run the application:
+   ```sh
+   ng serve
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-=======
-# e-book_reader_angular
->>>>>>> 9f1d472f672626aef26685899ba389c7b39db3a5
+Open `http://localhost:4200/` in your browser to view the app.
