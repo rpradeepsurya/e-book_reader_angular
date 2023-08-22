@@ -22,7 +22,7 @@ export class BookService {
   }
 
   getBookText(url:string) {
-    return this.http.get(`${this.bookurl}${url}`, {
+    return this.http.get(url, {
       responseType: 'text'
     });
   }
