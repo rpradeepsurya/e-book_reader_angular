@@ -1,4 +1,3 @@
-
 # E-Book Reader (Angular)
 
 An intuitive eBook reader application built with Angular, leveraging the Gutendex API to fetch and display book metadata from Project Gutenberg.
