@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'highlight'
 })
 export class HighlightPipe implements PipeTransform {
-  
+
   transform(text: string, searchQuery: string): string {
     if (!searchQuery) {
       return text;
@@ -12,4 +12,5 @@ export class HighlightPipe implements PipeTransform {
     const re = new RegExp(searchQuery, 'gi');
     return text.replace(re, '<mark id="1">$&</mark>');
   }
+
 }

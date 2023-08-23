@@ -1,8 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "/files/(.*)",
-      "destination": "https://www.gutenberg.org/$1"
-    }
-  ]
-}

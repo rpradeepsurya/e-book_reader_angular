@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { IBook } from './book.model';
-import { BookService } from './book.service';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +6,5 @@ import { BookService } from './book.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
-  ngOnInit(){
-  }
-
+  title = 'ebook_reader';
 }
