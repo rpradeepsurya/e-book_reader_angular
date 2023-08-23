@@ -1,0 +1,9 @@
+{
+    "rewrites": [
+      {
+        "source": "/files/(.*)",
+        "destination": "/api/fetch-gutenberg?path=files/$1"
+      }
+    ]
+  }
+  
