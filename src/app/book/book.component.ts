@@ -18,6 +18,7 @@ export class BookComponent implements OnInit {
   count = 0;
   index = 0; // to store the current instance of matched search result
   searchResults = document.getElementsByTagName("mark");
+  isLoading:boolean = false;
   
   constructor(
     private bookService: BookService,
@@ -32,6 +33,7 @@ export class BookComponent implements OnInit {
   }
 
   getBook(): void {
+    this.isLoading = true;
     const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
     this.bookService.getBookByID(id)
       .subscribe((data) => {
@@ -49,7 +51,12 @@ export class BookComponent implements OnInit {
           .subscribe((textdata) => {
             this.bookText = textdata;
             this.bookContinuousText = this.bookText.replaceAll("\r\n\r\n","<br><br>");
+          }, error => {
+            this.isLoading = false;
           })
+        this.isLoading = false;
+      }, error => {
+        this.isLoading = false;
       })
   }
   toggleDisplay() {
